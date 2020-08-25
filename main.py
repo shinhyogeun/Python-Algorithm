@@ -1,2 +1,7 @@
-a,b,c = input(".")
-print("%02.%02d.%02d".format(a,b,c))
+a = (list(input()))
+print("[%d]" %(int(a[0])*10000))
+print("[%d]" %(int(a[1])*1000))
+print("[%d]" %(int(a[2])*100))
+print("[%d]" %(int(a[3])*10))
+print("[%d]" %(int(a[4])))
+
