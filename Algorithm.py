@@ -331,4 +331,65 @@ for k in range(19):
     print(result2)
     result2 = "" '''
 
-#code up 98번
+# code up 98번
+
+'''a, b = map(int,input().split())
+c = [[0]*b for r in range(a)]
+d = int(input())
+i = 0
+result2 = ""
+while i < d:
+    i += 1
+    barlength,isThatRow,startXpoint,startYpoint = list(map(int,input().split()))
+    if isThatRow == 0:
+        for asd in range(barlength):
+            c[startXpoint-1][startYpoint-1+asd] = 1
+    else:
+        for asd in range(barlength):
+            c[startXpoint-1+asd][startYpoint-1] = 1
+for k in range(a):
+    for j in range(b):
+        result2 = result2 + str(c[k][j]) + " "
+    print(result2)
+    result2 = "" '''
+
+# code up 99번
+'''miro = [[0]*10 for _ in range(10)]
+whereIsAnt = [1,1]
+for i in range(10):
+    a = list(map(int,input().split()))
+    miro[i] = a
+result2 = ""
+
+if miro[whereIsAnt[0]][whereIsAnt[1]] == 2 :
+    miro[whereIsAnt[0]][whereIsAnt[1]] = 9
+    trigger = False
+else :
+    miro[whereIsAnt[0]][whereIsAnt[1]] = 9
+    trigger = True
+
+while trigger:
+    if miro[whereIsAnt[0]][whereIsAnt[1]+1] == 0:
+        if miro[whereIsAnt[0]][whereIsAnt[1]+1] != 2:
+            miro[whereIsAnt[0]][whereIsAnt[1]+1] = 9
+        elif miro[whereIsAnt[0]][whereIsAnt[1]+1] == 2:
+            miro[whereIsAnt[0]][whereIsAnt[1] + 1] = 9
+            trigger = False
+        whereIsAnt = [whereIsAnt[0],whereIsAnt[1]+1]
+    elif miro[whereIsAnt[0]][whereIsAnt[1]+1] == 1:
+        if miro[whereIsAnt[0]+1][whereIsAnt[1]] == 1:
+            trigger = False
+        elif miro[whereIsAnt[0]+1][whereIsAnt[1]] == 0:
+            miro[whereIsAnt[0]+1][whereIsAnt[1]] = 9
+        elif miro[whereIsAnt[0]+1][whereIsAnt[1]] == 2:
+            miro[whereIsAnt[0]+1][whereIsAnt[1]] = 9
+            trigger = False
+        whereIsAnt = [whereIsAnt[0]+1, whereIsAnt[1]]
+    elif miro[whereIsAnt[0]][whereIsAnt[1]+1] == 2:
+        miro[whereIsAnt[0]][whereIsAnt[1] + 1] = 9
+        trigger = False
+for k in range(10):
+    for j in range(10):
+        result2 = result2 + str(miro[k][j]) + " "
+    print(result2)
+    result2 = "" '''
