@@ -354,7 +354,7 @@ for k in range(a):
     result2 = "" '''
 
 # code up 99번
-'''miro = [[0]*10 for _ in range(10)]
+miro = [[0]*10 for _ in range(10)]
 whereIsAnt = [1,1]
 for i in range(10):
     a = list(map(int,input().split()))
@@ -392,4 +392,4 @@ for k in range(10):
     for j in range(10):
         result2 = result2 + str(miro[k][j]) + " "
     print(result2)
-    result2 = "" '''
+    result2 = ""
